@@ -7,13 +7,13 @@ import Keyboard from './components/Keyboard';
 function App() {
   return (
     <div className="App">
-    <nav>
-      <h1>
-        Wordl
-      </h1>
-    </nav>
-    <Board />
-    <Keyboard />
+      <nav>
+        <h1>
+          Wordl
+        </h1>
+      </nav>
+      <Board />
+      <Keyboard />
     </div>
   );
 }
