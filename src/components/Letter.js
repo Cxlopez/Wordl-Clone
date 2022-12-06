@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import React, {useContext} from 'react'
 import { AppContext } from '../App'
 
