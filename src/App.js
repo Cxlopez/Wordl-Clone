@@ -11,6 +11,7 @@ export const AppContext = createContext();
 function App() {
 
   const [board, setBoard] = useState(boardDefault)
+  const [currentAttempt, setCurrentAttempt] = useState({attempt: 0, letterPos: 0});
 
   return (
     <div className="App">
@@ -19,7 +20,7 @@ function App() {
           Wordl
         </h1>
       </nav>
-      <AppContext.Provider value={{ board, setBoard }}>
+      <AppContext.Provider value={{ board, setBoard, currentAttempt, setCurrentAttempt }}>
         <div className='game'>
           <Board />
           <Keyboard />
