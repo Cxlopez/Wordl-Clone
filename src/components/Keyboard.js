@@ -16,11 +16,11 @@ const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
         return <Key keyVal={key}/>
       })}</div>
       <div className='line3'>
-        <Key keyVal={"ENTER"} />
+        <Key keyVal={"ENTER"} bigKey/>
         {keys3.map((key) => {
         return <Key keyVal={key}/>
       })}
-      <Key keyVal={"DELETE"} />
+      <Key keyVal={"DELETE"} bigKey/>
       </div>
     </div>
   )
