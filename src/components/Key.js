@@ -2,12 +2,13 @@ import React, { useContext } from 'react'
 import { AppContext } from "../App"
 
 function Key({keyVal, bigKey}) {
-  const {board, setBoard} = useContext(AppContext);
+  const {board, setBoard, currentAttempt, setCurrentAttempt} = useContext(AppContext);
 
   const selectLetter = () => {
     const newBoard = [...board];
-    newBoard[0][0] = keyVal;
+    newBoard[currentAttempt.attempt][currentAttempt.letterPos] = keyVal;
     setBoard(newBoard);
+    setCurrentAttempt({attempt: currentAttempt.attempt, letterPos: currentAttempt.letterPos + 1});
   }
 
   return (
