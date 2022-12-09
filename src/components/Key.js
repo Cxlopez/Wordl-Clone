@@ -8,6 +8,12 @@ function Key({ keyVal, bigKey }) {
     if (keyVal === "ENTER") {
       if (currentAttempt.letterPos !== 5) return;
       setCurrentAttempt({ attempt: currentAttempt.attempt + 1, letterPos: 0})
+    } else if (keyVal === "DELETE") {
+      if (currentAttempt.letterPos === 0) return;
+      const newBoard = [...board];
+      newBoard[currentAttempt.attempt][currentAttempt.letterPos - 1] = "";
+      setBoard(newBoard);
+      setCurrentAttempt({...currentAttempt, letterPos: currentAttempt.letterPos - 1})
     } else {
       if (currentAttempt.letterPos > 4) return;
       const newBoard = [...board];
