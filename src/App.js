@@ -48,12 +48,12 @@ function App() {
     }
 
     if (currentWord === correctWord) {
-      setGameOver({gameOver: true, guessedWord: true});
+      setGameOver({ gameOver: true, guessedWord: true });
       return;
     }
-    
+
     if (currentAttempt.attempt === 5) {
-      setGameOver({gameOver: true, guessedWord: false});
+      setGameOver({ gameOver: true, guessedWord: false });
     }
   }
 
@@ -70,7 +70,7 @@ function App() {
     <div className="App">
       <nav>
         <h1>
-          Wordl
+          Cristians wordle
         </h1>
       </nav>
       <AppContext.Provider value={{ board, setBoard, currentAttempt, setCurrentAttempt, onSelectLetter, onEnter, onDelete, correctWord, setDisabledLetters, disabledLetters, gameOver, setGameOver }}>

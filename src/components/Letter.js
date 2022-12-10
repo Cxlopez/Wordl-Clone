@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-sequences */
-import React, {useContext, useEffect} from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../App';
 
 function Letter({ letterPos, attemptVal }) {
@@ -8,9 +8,9 @@ function Letter({ letterPos, attemptVal }) {
   const letter = board[attemptVal][letterPos];
 
   const correct = correctWord.toUpperCase()[letterPos] === letter
-  const almost =  !correct && letter !== "" && correctWord.includes(letter)
-  const letterState = currentAttempt.attempt > attemptVal && 
-  (correct ? "correct" : almost ? "almost" : "error");
+  const almost = !correct && letter !== "" && correctWord.toUpperCase().includes(letter)
+  const letterState = currentAttempt.attempt > attemptVal &&
+    (correct ? "correct" : almost ? "almost" : "error");
 
   useEffect(() => {
     if (letter !== "" && !correct && !almost) {

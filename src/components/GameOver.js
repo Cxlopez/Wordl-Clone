@@ -3,7 +3,7 @@ import { AppContext } from "../App";
 
 function GameOver() {
 
-  const {gameOver,currentAttempt, correctWord} = useContext(AppContext)
+  const { gameOver, currentAttempt, correctWord } = useContext(AppContext)
 
   return (
     <div className='gameOver'>
