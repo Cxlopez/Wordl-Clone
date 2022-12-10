@@ -38,7 +38,7 @@ function App() {
       currentWord += board[currentAttempt.attempt][i];
     }
 
-    if (wordSet.has(currentWord)) {
+    if (wordSet.has(currentWord.toLowerCase())) {
       setCurrentAttempt({ attempt: currentAttempt.attempt + 1, letterPos: 0 })
     } else {
       alert("Word Not Found");
