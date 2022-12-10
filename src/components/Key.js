@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { AppContext } from "../App";
 
 function Key({ keyVal, bigKey }) {
-  const { board, setBoard, currentAttempt, setCurrentAttempt } = useContext(AppContext);
+  const { onSelectLetter, onEnter, onDelete } = useContext(AppContext);
 
   const selectLetter = () => {
     if (keyVal === "ENTER") {
-
+      onEnter();
     } else if (keyVal === "DELETE") {
-      
+      onDelete();
     } else {
-      
+      onSelectLetter(keyVal);
     }
   };
 
