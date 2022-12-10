@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useContext } from 'react'
 import { AppContext } from '../App';
 import Key from './Key';
