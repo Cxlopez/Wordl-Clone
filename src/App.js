@@ -42,7 +42,7 @@ function App() {
           Wordl
         </h1>
       </nav>
-      <AppContext.Provider value={{ board, setBoard, currentAttempt, setCurrentAttempt }}>
+      <AppContext.Provider value={{ board, setBoard, currentAttempt, setCurrentAttempt, onSelectLetter, onEnter, onDelete }}>
         <div className='game'>
           <Board />
           <Keyboard />
