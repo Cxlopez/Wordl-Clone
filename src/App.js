@@ -13,6 +13,7 @@ function App() {
   const [board, setBoard] = useState(boardDefault)
   const [currentAttempt, setCurrentAttempt] = useState({ attempt: 0, letterPos: 0 });
   const [wordSet, setWordSet] = useState(new Set())
+  const [disabledLetters, setDisabledLetters] = useState([])
 
   const correctWord = "RIGHT";
 
@@ -44,6 +45,9 @@ function App() {
       alert("Word Not Found");
     }
 
+    if (currentWord === correctWord) {
+      alert("Correct!!!");
+    }
     
   }
 
@@ -63,7 +67,7 @@ function App() {
           Wordl
         </h1>
       </nav>
-      <AppContext.Provider value={{ board, setBoard, currentAttempt, setCurrentAttempt, onSelectLetter, onEnter, onDelete, correctWord }}>
+      <AppContext.Provider value={{ board, setBoard, currentAttempt, setCurrentAttempt, onSelectLetter, onEnter, onDelete, correctWord, setDisabledLetters, disabledLetters }}>
         <div className='game'>
           <Board />
           <Keyboard />
