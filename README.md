@@ -1,6 +1,6 @@
 # Wordle Clone
 
-I created this project to get some practice with react and for fun!
+I created this project to get some practice with react and for fun, everyone's enjoys wordle! 
 
 ![Screenshot 2022-12-12 at 11 39 56 PM](https://user-images.githubusercontent.com/93356900/207228177-7cbc9867-2df7-44cf-a834-0868960aa089.png)
 
